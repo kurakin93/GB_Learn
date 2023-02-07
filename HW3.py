@@ -85,3 +85,30 @@ print(nearest(list_1, x))
 # 	print(sum([k for i in text for k, v in points_ru.items() if i in v]))
 # else:
 # 	print(sum([k for i in text for k, v in points_en.items() if i in v]))
+
+name = input().lower()
+points_eng = {1: 'aeiolnstr',
+              2: 'dg',
+              3: 'bcmp',
+              4: 'fhvwy',
+              5: 'k',
+              8: 'jx',
+              10: 'qz'}
+
+points_rus = {1: 'авеинорст',
+              2: 'дклмпу',
+              3: 'бгёья',
+              4: 'йы',
+              5: 'жзхцч',
+              6: 'шэю',
+              7: 'фщъ'}
+temp = 0
+
+for i in name:
+    for j in points_rus:
+        for k in points_rus[j]:
+            if i == k:
+                temp += j
+print(temp)
+###### доделать
+
