@@ -27,16 +27,16 @@
 # 1 2 3 4 5
 # 6 -> 5
 
-# n = int(input('N '))
-# x = int(input('X '))
-# list_1 = []
-# list_2 = []
-# minimal = 0
-# maximal = 0
-# for i in range(1, n):
-#     list_1.append(i*4-x)
-# print(list_1)
-# print(min(list_1))
+
+n = int(input('N '))
+x = int(input('X '))
+list_1 = []
+for i in range(1, n):
+    list_1.append(i*3)
+def nearest(lst, target):
+  return min(lst, key=lambda x: abs(x-target))
+print(list_1)
+print(nearest(list_1, x))
 
 
 # Задача 20: В настольной игре Скрабл (Scrabble) каждая буква имеет определенную
@@ -62,34 +62,25 @@
 # Будем считать, что на вход подается только одно слово, которое содержит либо только
 # английские, либо только русские буквы.
 
-# name = input().lower()
-name = 'адбйжшф'
-points_eng = {1: 'aeiolnstr',
-              2: 'dg',
-              3: 'bcmp',
-              4: 'fhvwy',
-              5: 'k',
-              8: 'jx',
-              10: 'qz'}
 
-points_rus = {1: 'авеинорст',
-              2: 'дклмпу',
-              3: 'бгёья',
-              4: 'йы',
-              5: 'жзхцч',
-              6: 'шэю',
-              7: 'фщъ'}
-temp = 0
-for i in range(len(name)):
-    for j in range(len(name)):
-        if name[i] == points_rus.values():
-            temp += points_rus.keys()
-print(points_rus.keys())
-print(temp)
-
+# import re
 # def isCyrillic(text):
 # 	return bool(re.search('[а-яА-Я]', text))
-#
+# points_en = {1:'AEIOULNSTR',
+#       	2:'DG',
+#       	3:'BCMP',
+#       	4:'FHVWY',
+#       	5:'K',
+#       	8:'JZ',
+#       	10:'QZ'}
+# points_ru = {1:'АВЕИНОРСТ',
+#       	2:'ДКЛМПУ',
+#       	3:'БГЁЬЯ',
+#       	4:'ЙЫ',
+#       	5:'ЖЗХЦЧ',
+#       	8:'ШЭЮ',
+#       	10:'ФЩЪ'}
+# text = input().upper()
 # if isCyrillic(text):
 # 	print(sum([k for i in text for k, v in points_ru.items() if i in v]))
 # else:
