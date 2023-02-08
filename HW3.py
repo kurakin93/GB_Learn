@@ -64,51 +64,41 @@ print(nearest(list_1, x))
 
 
 # import re
-# def isCyrillic(text):
-# 	return bool(re.search('[а-яА-Я]', text))
-# points_en = {1:'AEIOULNSTR',
-#       	2:'DG',
-#       	3:'BCMP',
-#       	4:'FHVWY',
-#       	5:'K',
-#       	8:'JZ',
-#       	10:'QZ'}
-# points_ru = {1:'АВЕИНОРСТ',
-#       	2:'ДКЛМПУ',
-#       	3:'БГЁЬЯ',
-#       	4:'ЙЫ',
-#       	5:'ЖЗХЦЧ',
-#       	8:'ШЭЮ',
-#       	10:'ФЩЪ'}
-# text = input().upper()
-# if isCyrillic(text):
-# 	print(sum([k for i in text for k, v in points_ru.items() if i in v]))
+# name = input().lower()
+# points_eng = {1: 'aeiolnstr',
+#               2: 'dg',
+#               3: 'bcmp',
+#               4: 'fhvwy',
+#               5: 'k',
+#               8: 'jx',
+#               10: 'qz'}
+#
+# points_rus = {1: 'авеинорст',
+#               2: 'дклмпу',
+#               3: 'бгёья',
+#               4: 'йы',
+#               5: 'жзхцч',
+#               6: 'шэю',
+#               7: 'фщъ'}
+# def points_ru(text):
+#     temp = 0
+#     for i in text:
+#         for j in points_rus:
+#             for k in points_rus[j]:
+#                 if i == k:
+#                     temp += j
+#                     return temp
+#
+# def points_en(text):
+#     temp = 0
+#     for i in text:
+#         for j in points_eng:
+#             for k in points_eng[j]:
+#                 if i == k:
+#                     temp += j
+#                     return temp
+#
+# if bool(re.search('[а-яА-Я]', name)):
+#     print(points_ru(name))
 # else:
-# 	print(sum([k for i in text for k, v in points_en.items() if i in v]))
-
-name = input().lower()
-points_eng = {1: 'aeiolnstr',
-              2: 'dg',
-              3: 'bcmp',
-              4: 'fhvwy',
-              5: 'k',
-              8: 'jx',
-              10: 'qz'}
-
-points_rus = {1: 'авеинорст',
-              2: 'дклмпу',
-              3: 'бгёья',
-              4: 'йы',
-              5: 'жзхцч',
-              6: 'шэю',
-              7: 'фщъ'}
-temp = 0
-
-for i in name:
-    for j in points_rus:
-        for k in points_rus[j]:
-            if i == k:
-                temp += j
-print(temp)
-###### доделать
-
+#     print(points_en(name))
