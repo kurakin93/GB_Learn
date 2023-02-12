@@ -28,15 +28,26 @@
 # 6 -> 5
 
 
-n = int(input('N '))
-x = int(input('X '))
+# n = int(input('N '))
+# x = int(input('X '))
+n = 30
+x = 100
 list_1 = []
+temp = 0
 for i in range(1, n):
     list_1.append(i*3)
-def nearest(lst, target):
-  return min(lst, key=lambda x: abs(x-target))
 print(list_1)
-print(nearest(list_1, x))
+for k in range(0, n-1):
+    temp = min(abs(list_1[k] - x))
+print(k)
+
+
+
+
+
+
+
+
 
 
 # Задача 20: В настольной игре Скрабл (Scrabble) каждая буква имеет определенную
