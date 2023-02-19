@@ -21,21 +21,30 @@
 # значения которых принадлежат заданному диапазону
 # (т.е. не меньше заданного минимума и не больше заданного максимума)
 
-list_1 = sorted([1, 2, 0, 9, 2, 4, 7, 6, 5, 3, 8, 10])
-print(list_1)
-print('введите диапазон. ')
-maxnum = int(input('максимальное значение: '))
-minnum = int(input('минимальное значение: '))
-indexMin = 0
-indexMax = 0
-print(list_1)
-for i in range(len(list_1)):
-    if minnum == list_1[i]:
-        indexMin = i
-    elif maxnum == list_1[i]:
-        indexMax = i
-for i in range(indexMin, indexMax+1):
-    print(list_1[i])
+# list_1 = sorted([1, 2, 0, 9, 2, 4, 7, 6, 5, 3, 8, 10])
+# print(list_1)
+# print('введите диапазон. ')
+# maxnum = int(input('максимальное значение: '))
+# minnum = int(input('минимальное значение: '))
+# indexMin = 0
+# indexMax = 0
+# print(list_1)
+# for i in range(len(list_1)):
+#     if minnum == list_1[i]:
+#         indexMin = i
+#     elif maxnum == list_1[i]:
+#         indexMax = i
+# for i in range(indexMin, indexMax+1):
+#     print(list_1[i])
+#
+# print(f' {indexMin} - {indexMax} ')
 
-print(f' {indexMin} - {indexMax} ')
+list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+print(list_1)
+min_number = int(input())
+max_number = int(input())
+
+for i in range(len(list_1)):
+    if min_number <= list_1[i] <= max_number:
+        print(i)
  

@@ -15,26 +15,13 @@
 # Вывод:
 # Парам пам-пам
 
-# data = 'пара-ра-рам рам-пам-папама па-ра-па-да'.split()
-count_list = []
-count = 0
-data_word = (input('Введите фразу: ')).split()
-vowel_letters_rus = 'йуеаоэяиюы'
-
-for word in data_word:
-    for letters in word:
-        for letters_rus in vowel_letters_rus:
-            if letters == letters_rus:
-                count += 1
-    count_list.append(count)
-    count = 0
-
-if count_list.count(count_list[0]) == len(count_list):
-    print('Парам пам-пам')
-else:
-    print('Пам парам')
-
+# data_word = (input('Введите фразу: ')).split()
+# vowel_letters_rus = 'йуеаоэяиюы'
+#
+#
 # def count_vowel_letters(data):
+#     count_list = []
+#     count = 0
 #     for word in data:
 #         for letters in word:
 #             for letters_rus in vowel_letters_rus:
@@ -42,11 +29,14 @@ else:
 #                     count += 1
 #         count_list.append(count)
 #         count = 0
-#     return count_list
+#
+#     if count_list.count(count_list[0]) == len(count_list):
+#         print('Парам пам-пам')
+#     else:
+#         print('Пам парам')
+#
+# count_vowel_letters(data_word)
 
-
-
-# print(count_list)
 
 # Задача 36:
 #  Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
@@ -57,11 +47,47 @@ else:
 # Примечание: бинарной операцией называется любая операция,
 # у которой ровно два аргумента, как, например, у операции умножения.
 # Ввод:
-# print_operation_table(lambda x, y: x * y) Вывод:
+# print_operation_table(lambda x, y: x * y)
+# Вывод:
 # 1 2 3 4 5 6
-
 # 2 4 6 8 10 12
 # 3 6 9 12 15 18
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
+
+# num_rows = int(input('rows: '))
+# num_cols = int(input('cols: '))
+
+operation = lambda x, y: x * y
+
+
+def print_operation_table(operation, cols, rows):
+    for cols in range(1, cols + 1):
+        for rows in range(1, rows + 1):
+            print(operation(cols, rows), end='\t')
+        print()
+
+
+print_operation_table(operation, 6, 6)
+
+
+def function(x, y):
+    operation = input('Введите операцию +, -, /, *: ')
+    while True:
+        if operation == '*':
+            temp = x * y
+            break
+        if operation == '/':
+            temp = x / y
+            break
+        if operation == '+':
+            temp = x + y
+            break
+        if operation == '-':
+            temp = x - y
+            break
+        else:
+            print('Такой операции не существует!')
+            break
+    return temp
