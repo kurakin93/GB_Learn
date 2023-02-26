@@ -15,27 +15,27 @@
 # Вывод:
 # Парам пам-пам
 
-# data_word = (input('Введите фразу: ')).split()
-# vowel_letters_rus = 'йуеаоэяиюы'
-#
-#
-# def count_vowel_letters(data):
-#     count_list = []
-#     count = 0
-#     for word in data:
-#         for letters in word:
-#             for letters_rus in vowel_letters_rus:
-#                 if letters == letters_rus:
-#                     count += 1
-#         count_list.append(count)
-#         count = 0
-#
-#     if count_list.count(count_list[0]) == len(count_list):
-#         print('Парам пам-пам')
-#     else:
-#         print('Пам парам')
-#
-# count_vowel_letters(data_word)
+data_word = (input('Введите фразу: ')).split()
+vowel_letters_rus = 'йуеаоэяиюы'
+
+
+def count_vowel_letters(data):
+    count_list = []
+    count = 0
+    for word in data:
+        for letters in word:
+            for letters_rus in vowel_letters_rus:
+                if letters == letters_rus:
+                    count += 1
+        count_list.append(count)
+        count = 0
+
+    if count_list.count(next(iter(count_list))) == len(count_list):
+        print('Парам пам-пам')
+    else:
+        print('Пам парам')
+
+count_vowel_letters(data_word)
 
 
 # Задача 36:
@@ -58,36 +58,36 @@
 
 # num_rows = int(input('rows: '))
 # num_cols = int(input('cols: '))
-
-operation = lambda x, y: x * y
-
-
-def print_operation_table(operation, cols, rows):
-    for cols in range(1, cols + 1):
-        for rows in range(1, rows + 1):
-            print(operation(cols, rows), end='\t')
-        print()
-
-
-print_operation_table(operation, 6, 6)
-
-
-def function(x, y):
-    operation = input('Введите операцию +, -, /, *: ')
-    while True:
-        if operation == '*':
-            temp = x * y
-            break
-        if operation == '/':
-            temp = x / y
-            break
-        if operation == '+':
-            temp = x + y
-            break
-        if operation == '-':
-            temp = x - y
-            break
-        else:
-            print('Такой операции не существует!')
-            break
-    return temp
+#
+# operation = lambda x, y: x * y
+#
+#
+# def print_operation_table(operation, cols, rows):
+#     for cols in range(1, cols + 1):
+#         for rows in range(1, rows + 1):
+#             print(operation(cols, rows), end='\t')
+#         print()
+#
+#
+# print_operation_table(operation, 6, 6)
+#
+#
+# # def function(x, y):
+# #     operation = input('Введите операцию +, -, /, *: ')
+# #     while True:
+# #         if operation == '*':
+# #             temp = x * y
+# #             break
+# #         if operation == '/':
+# #             temp = x / y
+# #             break
+# #         if operation == '+':
+# #             temp = x + y
+# #             break
+# #         if operation == '-':
+# #             temp = x - y
+# #             break
+# #         else:
+# #             print('Такой операции не существует!')
+# #             break
+# #     return temp

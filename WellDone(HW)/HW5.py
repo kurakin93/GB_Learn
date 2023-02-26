@@ -27,12 +27,12 @@
 
 # a = int(input('число a - '))
 # b = int(input('число b - '))
-def sumnumab(a, b):
-    if b == 0:
-        return a
-    else:
-        a = 1 + sumnumab(a, b - 1)
-        return a
-
-
-print(sumnumab(4, 3))
+# def sumnumab(a, b):
+#     if b == 0:
+#         return a
+#     else:
+#         a = 1 + sumnumab(a, b - 1)
+#         return a
+#
+#
+# print(sumnumab(4, 3))
