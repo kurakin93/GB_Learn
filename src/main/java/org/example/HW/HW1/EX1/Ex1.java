@@ -11,7 +11,15 @@ package org.example.HW.HW1.EX1;
 
 public class Ex1 {
     public static void main(String[] args) {
-        System.out.println("bla bla");
-        System.out.println("Hello, world!");
+        String s = "the sky is blue";
+        String[] arr = s.split("\\b");
+
+        StringBuilder text_rev = new StringBuilder();
+        for (int i = arr.length-1; i >= 0; i--) {
+            text_rev.append(arr[i]);
+        }
+        String reversedString = text_rev.toString();
+        System.out.println(reversedString);
     }
+    
 }
