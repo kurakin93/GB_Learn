@@ -14,27 +14,52 @@ import java.util.Scanner;
  */
 
 public class Ex2 {
-    public static void main(String[] args){
-        System.out.println(sumCountPositiveNumb());
-    }
-    public static Integer sumCountPositiveNumb(){
-        Scanner iScanner = new Scanner(System.in);
-        System.out.printf("Input second number: ");
-        int number = iScanner.nextInt();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int value;
+        int sum = 0;
         int count = 0;
-        while (true) {
-            System.out.print("Input first number: ");
-            int two = iScanner.nextInt();
-            if (two == 0) {
-                iScanner.close();
-                return count;
-            } else {
-                if (number > 0 && two < 0) {
-                    count += number;
-                }
-                number = two;
+        do {
+            System.out.println("Input number: ");
+            value = scanner.nextInt();
+            sum = sum + value;
+            if (value < 0){
+                System.out.println(sum);
+                sum = 0;
             }
-        }
-
+        } while (value != 0);
+        System.out.println("Input 0");
     }
 }
+
+
+
+
+//    public static Integer sumCountPositiveNumb1() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Input number: ");
+//        int number_first = scanner.nextInt();
+//        int count = number_first;
+//        while (number_first != 0) {
+//            System.out.println("Input number: ");
+//            int number_second = scanner.nextInt();
+//            if (number_first > 0 && number_second > 0) {
+//                number_first = number_second;
+//                count += number_first;
+//            }
+//            else {
+//                if (number_second < 0) {
+//                    scanner.close();
+//                    return count;
+//                }
+//            }
+//        }
+//    }
+
+
+
+
+
+
+
+
