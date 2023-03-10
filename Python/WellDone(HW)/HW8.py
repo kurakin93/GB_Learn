@@ -84,16 +84,25 @@
 
 text = 'pipes.txt'
 
-def open_read_file(file):
-    with open(file, 'r', encoding='utf-8') as data:
-        list = []
-        for line in data:
-            list.append(line)
-            print(list)
+# def open_read_file(file):
+#     with open(file, 'r', encoding='utf-8') as data:
+#         list = []
+#         for line in data:
+#             list.append(line.strip())
+#             print(list)
 
+# with open(text) as f:
+#   for line in f:
+#     if not line.strip():
+#       break
+#     print(line)
 
-
-open_read_file(text)
+with open(text, 'r') as f:
+  lines = f.readlines()
+  for line in lines:
+    if line.strip():  # Skip empty lines
+      print(line)
+# open_read_file(text)
 
 # Пример
 # Ввод
