@@ -36,11 +36,12 @@ public class Example1 {
         arrItems.add(items9);
         arrItems.add(items10);
         String str = "Высший";
+        System.out.println(compare(items2.getName(), str));
 
         List<Integer> price = new ArrayList<>();
         for (Items elem:
              arrItems) {
-            if (elem.getName().equals(str)){
+            if (compare(elem.getName(), str)){
                 price.add(elem.getPrice());
             }
         }
@@ -54,4 +55,8 @@ public class Example1 {
         }
         System.out.println(max);
     }
+    static boolean compare(String stringname, String string){
+        return stringname.startsWith(string);
+    }
+
 }
