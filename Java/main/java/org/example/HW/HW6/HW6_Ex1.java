@@ -29,14 +29,15 @@ public class HW6_Ex1 {
      * Основное меню программы
      */
     static void action_selection() {
-        System.out.println("Меню: \n" +
-                "1. Открыть весь список ноутбуков\n" +
-                "2. Фильтр ноутбуков: \n" +
-                "3. Выход \n");
+        System.out.println("""
+                Меню:\s
+                1. Открыть весь список ноутбуков\s
+                2. Фильтр ноутбуков:\s
+                3. Выход\s
+                """);
         Scanner sc = new Scanner(System.in);
         List<Model_laptop> temp = laptop_Database();
-        Integer num = sc.nextInt();
-        String str = sc.nextLine();
+        int num = sc.nextInt();
         if (num == 1 || num == 2 || num == 3) {
             switch (num) {
                 case 1: {
@@ -59,20 +60,21 @@ public class HW6_Ex1 {
         }
     }
 
-    static void sorting_action_selection(List temp) {
-        System.out.println("Фильтр по: \n" +
-                "1. Процессору \n" +
-                "2. Размеру экрана: \n" +
-                "3. Объему DDR \n" +
-                "4. OS \n" +
-                "5. Цвету \n" +
-                "6. Объему HDD \n" +
-                "7. Видеокарте \n" +
-                "8. Весу \n" +
-                "9. Цене \n" +
-                "10. Выход");
+    static void sorting_action_selection(List<Model_laptop> temp) {
+        System.out.println("""
+                Фильтр по:\s
+                1. Процессору\s
+                2. Размеру экрана:\s
+                3. Объему DDR\s
+                4. OS\s
+                5. Цвету\s
+                6. Объему HDD\s
+                7. Видеокарте\s
+                8. Весу\s
+                9. Цене\s
+                10. Выход""");
         Scanner sc = new Scanner(System.in);
-        Integer num = sc.nextInt();
+        int num = sc.nextInt();
         switch (num) {
             case 1: {
                 temp = sorting_processor_model(temp);
