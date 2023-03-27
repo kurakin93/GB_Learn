@@ -27,7 +27,7 @@ import java.util.List;
 public class Model_laptop {
     private String processor_model;
     private Integer screen_size;
-    private String amount_of_memory;
+    private Integer amount_of_memory;
     private String operating_system;
     private String color;
     private Integer drive_capacity;
